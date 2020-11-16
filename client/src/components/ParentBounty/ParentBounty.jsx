@@ -15,7 +15,7 @@ function ParentBounty(props) {
   const [formObject, setFormObject] = useState({});
   const [points, setPoints] = useState(Number);
   const [totalPoints, setTotalPoints] = useState(Number);
-  const [previousPoints, setPreviousPoints] = useState("");
+  // const [previousPoints, setPreviousPoints] = useState("");
 
   useEffect(() => {
     loadTasks();
@@ -42,7 +42,7 @@ function ParentBounty(props) {
 
     function loadPoints() {
       API.getPoints()
-        .then((res) => {setPreviousPoints(res.data.points)})
+        .then((res) => {console.log(res.data.points)})
         .catch((err) => console.log(err));
     }
 
@@ -92,7 +92,7 @@ function ParentBounty(props) {
             Bounty Board
             </div>
             <div className="col-md-3">
-                <h3>Points: {previousPoints}</h3>              
+                <h3>Points: {points}</h3>              
             </div>
         </div>
 
