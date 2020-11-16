@@ -2,6 +2,6 @@ module.exports = {
   Parent: require("./parent"),
   Child: require("./child"),
   Task: require("./task"),
-  User: require("./User"),
+  User: require("./user"),
   Points: require("./points"),
 };
